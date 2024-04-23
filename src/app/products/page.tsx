@@ -14,23 +14,22 @@ async function  Products() {
     }
 
     const data = await fetchData();
+    // console.log(data);
 
     interface Product {
         id: number;
         title: string;
+        image: string;
+        price: number;
     }
-
-    interface ProductProps {
-        title: string;
-      }
 
     return ( 
         
         <>
         <button><Link href="/">Back</Link></button>
                 <h1>Products</h1>
-                <div>
-                    {data.map((product: Product) => <Product key={product.id} id={product.id} title={product.title} />)}
+                <div className="flex flex-col gap-5 max-w-[400px] m-auto">
+                    {data.map((product: Product) => <Product key={product.id} id={product.id} title={product.title} image={product.image} price={product.price}/>)}
                 </div>
         </>
      );
