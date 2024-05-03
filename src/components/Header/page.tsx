@@ -1,6 +1,8 @@
-
+"use client";
+import { useRouter } from "next/navigation";
 
 function Header() {
+  const router = useRouter();
     return ( 
         <header style={
             {
@@ -10,7 +12,8 @@ function Header() {
             }
           }>
             Header stuling
-
+            <hr />
+            <button onClick={() => router.back()}>Назад</button>
           </header>
      );
 }
