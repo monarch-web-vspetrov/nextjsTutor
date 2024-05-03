@@ -6,6 +6,10 @@ export default function Home() {
     <>
       <h1>Next.js</h1>
       <Link href="/products">Products</Link>
+      <Link href="/blog">blog</Link>
+      <Link href="/dashbord">dashbord</Link>
+      <Link href="/login">login</Link>
+      <Link href="/reg">reg</Link>
     </>
   );
 }
