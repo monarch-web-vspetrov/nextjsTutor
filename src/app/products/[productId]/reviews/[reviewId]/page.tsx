@@ -1,20 +1,19 @@
-// "use client"
+"use client"
 import Link from "next/link";
-import { notFound } from "next/navigation";
 import { Metadata } from "next";
 
 
-export const generateMetadata = ({params} : {
-    params: {
-        productId: string,
-        reviewId: string
-    }
-}) : Metadata => {
-    return {
-        title: `Product ${params.reviewId}`,
-        description: `Review ${params.reviewId} on product ${params.productId}`
-    }
-}
+// export const generateMetadata = ({params} : {
+//     params: {
+//         productId: string,
+//         reviewId: string
+//     }
+// }) : Metadata => {
+//     return {
+//         title: `Product ${params.reviewId}`,
+//         description: `Review ${params.reviewId} on product ${params.productId}`
+//     }
+// }
 function Review({params}: {
     params: {
         productId: string,
@@ -22,7 +21,7 @@ function Review({params}: {
     }
 }) {
     if (parseInt(params.reviewId) > 1000){
-        notFound()
+        throw new Error("Текст ошибки")
     }
     return ( 
         <div>
