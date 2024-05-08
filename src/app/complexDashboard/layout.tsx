@@ -11,7 +11,7 @@ export default function Layout({
   notification: React.ReactNode;
   login: React.ReactNode;
 }) {
-  const isLogin = false;
+  const isLogin = true;
 
   return isLogin ? (
     <section>
